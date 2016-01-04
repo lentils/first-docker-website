@@ -62,4 +62,18 @@
       Note: A &lt;button&gt; is similar to &lt;input&gt; except the former allows for any html content, whereas the latter only allows for plain text. See <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_<button>_to_finish">Mozilla docs</a>.
     </div>
   </form>
+  <h2>Testing a form with content that gets processed elsewhere</h2>
+  <p>Here we are going to try to upload content to a Python script called <code>
+      my-first-cgi.py
+    </code>.</p>
+  <form action="my-first-cgi.py">
+    Fender or Gibson?
+    <div>
+    <select name="my-dropdown">
+      <option value="Fender">Fender</option>
+      <option value="Gibson">Gibson</option>
+    </select>
+    <input type="submit" value="Submit">
+    </div>
+  </form>
 </html>

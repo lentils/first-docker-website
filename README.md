@@ -2,7 +2,7 @@
 
 This is my first crack at web development. I'll be following along [Mozilla's
 guide](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web) and building off of
-that. Hopefully other newbies can also get some useful information from my example.
+that. This README will be working notes on things I discover along the way. Hopefully other newbies can also get some useful information from my example.
 
 # Docker
 
@@ -39,6 +39,21 @@ Get a list of all running Docker VMs and their IP addresses with `docker-machine
 to Docker, you probably just have one, labeled `default`. If you are running a Docker container with
 forwarded ports, you should be able to enter that address into your browser (don't specify a port),
 and see the content you want to serve.
+
+# Website plumbing
+
+Interactive content usually requires some input from the user. That content generally has to go
+somewhere else to be processed. This requires routing.
+
+## CGI (Common Gateway Interface)
+
+[CGI](https://httpd.apache.org/docs/2.4/howto/cgi.html) seems like a lightweight way to work with
+content interactively. With the Apache container `httpd`, CGI scripts can be placed in
+`/usr/local/apache2/cgi-bin`. Then, specify the name of the script in the `action` attribute of a
+`form` element, like so:
+
+    <form action="my-cgi-script.py">
+
 
 
 
