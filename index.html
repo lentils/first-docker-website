@@ -30,9 +30,36 @@
   </body>
   <script src="scripts/main.js"></script>
   <h1>Testing out forms.</h1>
+  <h2>This is an input form for text content...</h2>
   <form id="test-form">
     Birthdate: <input type="month">
     <input type="button" onclick="mySubmitFunction()" value="Submit?">
     <input type="button" onclick="myResetFunction()" value="Reset">
+  </form>
+  <h2>This is a file upload form</h2>
+  <form id="file-upload-form">
+    Upload a file: <input type="file" name="pic">
+    <input type="submit">
+  </form>
+  <h1>Playing with div elements</h1>
+  <form method="post">
+    <div>
+      <label>Enter your name: </label>
+      <input type="text">
+    </div>
+    <div>
+      <label>Enter your age: </label>
+      <input type="date">
+    </div>
+    <div>
+      <label>Enter whatever you want here! </label>
+      <textarea id="input-msg"></textarea>
+    </div>
+    <div class="button">
+      <button type="submit">Ship it!</button>
+    </div>
+    <div class="footnote">
+      Note: A &lt;button&gt; is similar to &lt;input&gt; except the former allows for any html content, whereas the latter only allows for plain text. See <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form#And_a_<button>_to_finish">Mozilla docs</a>.
+    </div>
   </form>
 </html>

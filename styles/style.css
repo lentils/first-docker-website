@@ -18,3 +18,9 @@ img {
     margin: 0 auto;
     display: block;
 }
+
+.footnote {
+    font-size: 12px;
+    color: grey;
+
+}
